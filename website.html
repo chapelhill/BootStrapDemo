@@ -22,9 +22,65 @@
   <p>Here is a sample website that I have created using bootstrap.</p>
   <p><a class="btn btn-primary btn-lg" href="http://getbootstrap.com/" role="button">Learn more about bootstrap</a></p>
 </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+<button id ="test" class="btn btn-primary btn-lg">show</button>
+  <button id ="test2" class="btn btn-primary btn-lg">hide</button>
+<br>
+  <br/>Enter first number:
+  <input type="text" id="txt1" name="text1">
+  <br>
+  <br/>Enter second number:
+  
+  <input type="text" id="txt2" name="text2">
+  <button onclick="myFunction()" class="btn btn-primary btn-lg">Try it</button>
+  <p id="demo"></p>
+  <p>Contact info</p>
+
+</button>
+  <p>Email: ecwu at live.unc.edu</p>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("#test").click(function(){
+    $(".jumbotron").show(1000);
+  });
+  $("#test2").click(function(){
+    $(".jumbotron").hide(1000);
+  });
+});
+</script>
+<script type="text/javascript"> 
+var numbers = [];
+ function myFunction() {
+  
+    var y = document.getElementById("txt1").value;
+    var z = document.getElementById("txt2").value;
+    var x = Number(y) + Number(z);
+ 
+    if((y === "" || z ==="")||(isNaN(y)|| isNaN(z)) ){
+     alert("type in a number!!");
+   }else{
+    document.getElementById("demo").innerHTML = x;
+    numbers[numbers.length]=x;
+  }
+
+  }
+  function search (x){
+    for(var i =0; i < numbers.length; i++){
+      if (numbers[i]===x){
+        alert("you have found it!!");
+      }else{
+        alert("It does not exist!!");
+      }
+    }
+  }
+   function find (x){
+    alert(numbers[x]);
+  }
+</script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
 </html>
