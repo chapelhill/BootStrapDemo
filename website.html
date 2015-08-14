@@ -10,7 +10,7 @@
 <ul class="nav nav-pills">
   <li role="presentation" class="active"><a href="#">Home</a></li>
   <li role="presentation"><a href="pics.html">Carousel</a></li>
-  <li role="presentation"><a href="#">Messages</a></li>
+  <li role="presentation"><a href="Hanoi.html">Hanoi</a></li>
 </ul>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +19,7 @@
 
 <div class="jumbotron">
   <h1>Hello, world!</h1>
-  <p>Here is a sample website that I have created using bootstrap.</p>
+  <p>Here is a sample website that I have created using bootstrap. Feel free to look around!</p>
   <p><a class="btn btn-primary btn-lg" href="http://getbootstrap.com/" role="button">Learn more about bootstrap</a></p>
 </div>
 <button id ="test" class="btn btn-primary btn-lg">show</button>
@@ -31,8 +31,13 @@
   <br/>Enter second number:
   
   <input type="text" id="txt2" name="text2">
-  <button onclick="myFunction()" class="btn btn-primary btn-lg">Try it</button>
-  <p id="demo"></p>
+  <button onclick="myFunction()" class="btn btn-primary btn-lg">Add</button>
+    <p id="demo"></p>
+    <br/>Enter to see if your previous answers exists:
+  
+  <input type="text" id="txt3" name="text3">
+  <button onclick="search()" class="btn btn-primary btn-lg">Try it</button>
+
   <p>Contact info</p>
 
 </button>
@@ -67,9 +72,11 @@ var numbers = [];
   }
 
   }
-  function search (x){
+  function search (){
+    var x = document.getElementById("txt3").value;
+  
     for(var i =0; i < numbers.length; i++){
-      if (numbers[i]===x){
+      if (numbers[i]==x){
         alert("you have found it!!");
       }else{
         alert("It does not exist!!");
