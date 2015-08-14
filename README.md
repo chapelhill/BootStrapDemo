@@ -1,3 +1,2 @@
 # BootStrapDemo
-somepages
-Simply Click on website.html to view the website
+Simply Click on website.html as a beginning point to look around.
